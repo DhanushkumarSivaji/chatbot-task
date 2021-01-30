@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-size: 20px;
+  background: linear-gradient(315deg, #5899e2 0%, #bad4f3 100%);
+  font-family: 'Yusei Magic', sans-serif;
+  height: 100vh;
+  font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile{
+  width: 350px;
+  height: 635px;
+  border: 5px solid #fff;
+  border-radius: 30px;
+  margin-top: 40px;
+  background-color: hsl(270, 20%, 96%);
+
+}
+.header{
+  height: 90px;
+  background: hsl(270, 20%, 96%);
+  border-radius: 20px 20px 10px 10px;
+  border-bottom: 0.5px solid #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.desc{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chevron{
+  position: relative;
+  margin-top: 0px;
+  margin-right: 15px;
+  opacity: 0.8;
+  color: #5899e2;
+}
+.chevron::before{
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  width: 3px;
+  height: 9px;
+  background-color:  #97bfed;
+  transform: skew(-28deg,0deg);
+}
+.chevron::after{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 3px;
+  height: 9px;
+  background-color:  #97bfed;
+  transform: skew(28deg,0deg);
+}
+.avatar img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 2px;
+  border: 2px solid #fff;
+}
+.name{
+  color: black;
+  margin-top: -4px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+.status{
+  font-size: 14px;
+  color: #aba1a1;
+  opacity: 0.6;
+}
+.dots{
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  margin-left: 280px;
+  background-color: #97bfed;
+  border-radius: 50%;
+}
+.dots::before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: -6px;
+  left: 0px;
+  background-color: #97bfed;
+  border-radius: 50%;
+}
+.dots::after{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 6px;
+  left: 0px;
+  background-color: #97bfed;
+  border-radius: 50%;
+}
+.messages{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 460px;
+  padding: 10px 5px 10px;
+  font-size: 12px;
+  border-radius: 10px 10px 20px 20px;
+  position: relative;
+  overflow-y: scroll; 
+  background-color: hsl(270, 20%, 96%);
+}
+.text{
+  border-radius: 15px;
+}
+.reply{
+  color: #fff;
+  font-size: 14px;
+  background-color: #97bfed;
+  max-width: 60%;
+  width: fit-content;
+  display: flex;
+  align-items: flex-end;
+  margin-left: 120px;
+  padding: 10px;
+  border-bottom-right-radius: 0;
+  margin-top: 7px;
+  margin-right: 5px;
+}
+
+.user{
+  max-width: 60%;
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding: 8px 10px 8px 12px;
+  border-bottom-left-radius: 0px;
+  color: hsl(0, 0%, 26%);
+  background-color: #fff;
+  margin-left: 4px;
+  border: 0.5px solid #97bfed ;
+}
+.reply1{
+  margin-left: auto;
+  margin-bottom: 7px;
+}
+
+form{
+  display: flex;
+  margin-top: 5px;
+  width: 90%;
+}
+input{
+  width: 100%;
+  padding: 18px 25px 15px;
+  border-radius: 35px;
+  border: 1px solid  #97bfed;
+  opacity: 0.8;
+  box-shadow: 0 10px 20px hsl(206, 6%, 79%);
+  background: #97bfed; 
   color: white;
+  justify-content: center;
+
+}
+input:focus{
+  outline: none;
+  color: #fff;
+  font-family: 'Yusei Magic', sans-serif;
+
 }
 
-.App-link {
-  color: #61dafb;
+::placeholder {
+    color:#fff;
+    font-family: 'Yusei Magic', sans-serif;
+    opacity: 1; 
+}
+  
+:-ms-input-placeholder { 
+   color:#fff;
+   font-family: 'Yusei Magic', sans-serif;
+
+}
+  
+::-ms-input-placeholder { 
+   color:#fff;
+   font-family: 'Yusei Magic', sans-serif;
+
+}
+.sendIcon{
+  font-size: 30px;
+  color: #fff;
+  opacity: 0.8;
+  padding: 0px 11px;
+  height: 36px;
+  margin-left: -47px;
+  z-index: 100;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Media Queries */
+  @media(max-width: 340px){
+    .mobile{
+      width: 330px;
+      margin-top: 10px;
+      height: 600px;
+    }
+
+    .messages{
+      height: 400px;
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
