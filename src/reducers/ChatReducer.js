@@ -1,7 +1,6 @@
 /* eslint-disable */
-import { shuffle } from 'lodash';
-import { generateRandomNumber } from '../utils';
-import { UPDATE_MESSAGE,GET_MESSAGES,ADD_MESSAGE,MSG_REPLY } from "../actions/Types";
+
+import { UPDATE_MESSAGE,GET_MESSAGES,ADD_MESSAGE,USER_REPLY_MESSAGE } from "../actions/Types";
 
 const initialState = {
     messages: []
@@ -19,7 +18,13 @@ export default function (state = initialState, action) {
     case ADD_MESSAGE: 
       return {
         ...state,
-        messages: [...state.messages, action.payload ,shuffle(MSG_REPLY)[generateRandomNumber()]]
+        messages: [...state.messages, action.payload]
+      }
+      
+    case USER_REPLY_MESSAGE: 
+      return {
+        ...state,
+        messages: [...state.messages, action.payload]
       }
 
     case UPDATE_MESSAGE:

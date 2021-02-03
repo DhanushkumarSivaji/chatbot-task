@@ -1,4 +1,6 @@
-import { UPDATE_MESSAGE,MSG_DATA,GET_MESSAGES,ADD_MESSAGE } from './Types';
+import { shuffle } from 'lodash';
+import { generateRandomNumber } from '../utils';
+import { UPDATE_MESSAGE,MSG_DATA,GET_MESSAGES,ADD_MESSAGE,USER_REPLY_MESSAGE,MSG_REPLY } from './Types';
 
 
 
@@ -14,6 +16,13 @@ export const addMessage = (data) => dispatch => {
     type: ADD_MESSAGE,
     payload: data
    });
+
+   setTimeout(() => {
+      dispatch({
+         type: USER_REPLY_MESSAGE,
+         payload: shuffle(MSG_REPLY)[generateRandomNumber()]
+        });
+   }, 500);
 }
 
 export const updateMessage = (data) => dispatch => {
@@ -21,4 +30,5 @@ export const updateMessage = (data) => dispatch => {
         type: UPDATE_MESSAGE,
         payload: data
       });
+   
 }

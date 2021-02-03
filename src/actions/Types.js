@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 export const GET_MESSAGES = "GET_MESSAGES"
 export const UPDATE_MESSAGE = "UPDATE_MESSAGE"
 export const ADD_MESSAGE = "ADD_MESSAGE"
+export const USER_REPLY_MESSAGE = "USER_REPLY_MESSAGE"
 
 export const MSG_DATA = [
     {
