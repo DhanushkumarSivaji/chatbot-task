@@ -1,55 +1,46 @@
+import { v4 as uuidv4 } from 'uuid';
 export const GET_MESSAGES = "GET_MESSAGES"
 export const UPDATE_MESSAGE = "UPDATE_MESSAGE"
+export const ADD_MESSAGE = "ADD_MESSAGE"
 
 export const MSG_DATA = [
     {
-      messageId: 1,
+      messageId: uuidv4(),
       message: "Hi Dhanush, How are you",
       type: "user"
-    },
+    }
+  ]
+export const MSG_REPLY = [
     {
-      messageId: 2,
-      message: "Hey man, Good. Great to hear from you",
-      type: "reply"
-    },
-    {
-      messageId: 3,
-      message: "Whats up?",
-      type: "reply"
-    },
-    {
-      messageId: 4,
+      messageId: uuidv4(),
       message: "Shall we go for a movie today afternoon ?",
       type: "user"
     },
     {
-      messageId: 5,
-      message: "Are u available?",
+      messageId: uuidv4(),
+      message: "How is your parents?",
       type: "user"
     },
     {
-      messageId: 6,
-      message: "Yep sure. At what time?",
-      type: "reply"
-    },
-    {
-      messageId: 7,
-      message: "It would be around 6pm",
+      messageId: uuidv4(),
+      message: "Did you changed your laptop?",
       type: "user"
     },
     {
-      messageId: 8,
-      message: "okay. Lets catchup then",
-      type: "reply"
+      messageId: uuidv4(),
+      message: "What about your gym goals?",
+      type: "user"
     },
+    
     {
-      messageId: 9,
-      message: "Cool. I will come to pick you up at 5.45",
+      messageId: uuidv4(),
+      message: "At what time you will start work ?",
       type: "user"
     },
     {
-      messageId: 10,
-      message: "Sure, I will be ready at that time",
-      type: "reply"
+      messageId: uuidv4(),
+      message: "How is your cloud certificate preparations ?",
+      type: "user"
     },
+
   ]
