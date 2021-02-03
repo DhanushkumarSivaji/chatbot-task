@@ -36,11 +36,19 @@ const Chat = () => {
         e.preventDefault()
 
         if (isUpdate) {
-            let returnValue = data
-            returnValue.message = value
-            dispatch(updateMessage(returnValue))
-            setValue('')
-            setIsUpdate(false)
+
+            if (value !== '') {
+                let returnValue = data
+                returnValue.message = value
+                dispatch(updateMessage(returnValue))
+                setValue('')
+                setIsUpdate(false)
+            } else {
+                dispatch(updateMessage(data))
+                setValue('')
+                setIsUpdate(false)
+            }
+
         } else {
             if (value !== '') {
                 let returnData = {

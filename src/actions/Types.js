@@ -6,7 +6,7 @@ export const ADD_MESSAGE = "ADD_MESSAGE"
 export const MSG_DATA = [
     {
       messageId: uuidv4(),
-      message: "Hi Dhanush, How are you",
+      message: "Hi Dhanush,How are you?",
       type: "user"
     }
   ]
